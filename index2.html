@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Title</p>
+       <input type="text" id="titleInput">
+    <p>Todo</p>
+       <textarea name="" id="areaInput" cols="30" rows="10"></textarea>
+    <button onclick="add()">Add</button>
+    <ul id="pri"></ul>
+
+        <script>
+            var x = document.querySelector("#titleInput")
+            var y = document.querySelector("#areaInput")
+            var title = x.value;
+            var area = y.value;
+
+        function add() {
+ 
+            var todoList = {
+                plaats:x.value,
+                taak:y.value,
+            result: function() {
+            return this.plaats + " " + this.taak ;
+        }
+        }
+    document.querySelector("#pri").innerHTML = "<li>" + todoList.result("</li><li>") + "</li>"
+              }
+</script>
+
+
+
+</body>
+</html>
